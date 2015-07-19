@@ -6,11 +6,42 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		E1D7A0DC1B5C03F300730B1F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E1D7A0D71B5C03F200730B1F /* ios-objective-c.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E1D7A0AE1B5C03F200730B1F;
+			remoteInfo = "ios-objective-c";
+		};
+		E1D7A0DE1B5C03F300730B1F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E1D7A0D71B5C03F200730B1F /* ios-objective-c.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E1D7A0C71B5C03F200730B1F;
+			remoteInfo = "ios-objective-cTests";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E1D7A0D71B5C03F200730B1F /* ios-objective-c.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "ios-objective-c.xcodeproj"; path = "ios-objective-c/ios-objective-c.xcodeproj"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
 /* Begin PBXGroup section */
 		E1D7A09E1B5C03DB00730B1F = {
 			isa = PBXGroup;
 			children = (
+				E1D7A0D71B5C03F200730B1F /* ios-objective-c.xcodeproj */,
 			);
+			sourceTree = "<group>";
+		};
+		E1D7A0D81B5C03F200730B1F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E1D7A0DD1B5C03F300730B1F /* ios-objective-c.app */,
+				E1D7A0DF1B5C03F300730B1F /* ios-objective-cTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -30,11 +61,34 @@
 			);
 			mainGroup = E1D7A09E1B5C03DB00730B1F;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E1D7A0D81B5C03F200730B1F /* Products */;
+					ProjectRef = E1D7A0D71B5C03F200730B1F /* ios-objective-c.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		E1D7A0DD1B5C03F300730B1F /* ios-objective-c.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "ios-objective-c.app";
+			remoteRef = E1D7A0DC1B5C03F300730B1F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E1D7A0DF1B5C03F300730B1F /* ios-objective-cTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "ios-objective-cTests.xctest";
+			remoteRef = E1D7A0DE1B5C03F300730B1F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin XCBuildConfiguration section */
 		E1D7A0A31B5C03DB00730B1F /* Debug */ = {
