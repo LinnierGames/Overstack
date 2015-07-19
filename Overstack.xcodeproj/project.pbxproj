@@ -21,16 +21,32 @@
 			remoteGlobalIDString = E1D7A0C71B5C03F200730B1F;
 			remoteInfo = "ios-objective-cTests";
 		};
+		E1D7A1111B5C046300730B1F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E1D7A10C1B5C046100730B1F /* osx-objective-c.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E1D7A0E91B5C046100730B1F;
+			remoteInfo = "osx-objective-c";
+		};
+		E1D7A1131B5C046300730B1F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E1D7A10C1B5C046100730B1F /* osx-objective-c.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E1D7A0FC1B5C046100730B1F;
+			remoteInfo = "osx-objective-cTests";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		E1D7A0D71B5C03F200730B1F /* ios-objective-c.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "ios-objective-c.xcodeproj"; path = "ios-objective-c/ios-objective-c.xcodeproj"; sourceTree = "<group>"; };
+		E1D7A10C1B5C046100730B1F /* osx-objective-c.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "osx-objective-c.xcodeproj"; path = "osx-objective-c/osx-objective-c.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
 		E1D7A09E1B5C03DB00730B1F = {
 			isa = PBXGroup;
 			children = (
+				E1D7A10C1B5C046100730B1F /* osx-objective-c.xcodeproj */,
 				E1D7A0D71B5C03F200730B1F /* ios-objective-c.xcodeproj */,
 			);
 			sourceTree = "<group>";
@@ -40,6 +56,15 @@
 			children = (
 				E1D7A0DD1B5C03F300730B1F /* ios-objective-c.app */,
 				E1D7A0DF1B5C03F300730B1F /* ios-objective-cTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E1D7A10D1B5C046100730B1F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E1D7A1121B5C046300730B1F /* osx-objective-c.app */,
+				E1D7A1141B5C046300730B1F /* osx-objective-cTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,6 +91,10 @@
 					ProductGroup = E1D7A0D81B5C03F200730B1F /* Products */;
 					ProjectRef = E1D7A0D71B5C03F200730B1F /* ios-objective-c.xcodeproj */;
 				},
+				{
+					ProductGroup = E1D7A10D1B5C046100730B1F /* Products */;
+					ProjectRef = E1D7A10C1B5C046100730B1F /* osx-objective-c.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -86,6 +115,20 @@
 			fileType = wrapper.cfbundle;
 			path = "ios-objective-cTests.xctest";
 			remoteRef = E1D7A0DE1B5C03F300730B1F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E1D7A1121B5C046300730B1F /* osx-objective-c.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "osx-objective-c.app";
+			remoteRef = E1D7A1111B5C046300730B1F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E1D7A1141B5C046300730B1F /* osx-objective-cTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "osx-objective-cTests.xctest";
+			remoteRef = E1D7A1131B5C046300730B1F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
