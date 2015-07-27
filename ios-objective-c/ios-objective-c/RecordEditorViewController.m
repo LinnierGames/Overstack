@@ -53,24 +53,44 @@
     
 }
 
+#pragma mark Return Functions > Pre-Defined Functions (TEXT FIELD)
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    if ([textField isEqual: textName])
+        [textField resignFirstResponder];
+    
+    return YES;
+}
+
 #pragma mark - Void's
+
+#pragma mark Void's > Pre-Defined Functions (TEXT FIELD)
+
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    if ([textField isEqual: textName])
+        [arrayM replaceObjectAtIndex: PERSON_name withObject: textField.text];
+    
+}
 
 #pragma mark - IBActions
 
 - (void)pressLeftNav:(id)sender {
     [self.navigationController popViewControllerAnimated: YES];
+    
 }
 
 - (void)pressRightNav:(id)sender {
     NSMutableArray *arrayDatabase = [NSMutableArray arrayWithArray: [Library returnContentsOfDatabase]];
     if (option == CTRecordAdding) { //Adding a New Record
         [arrayDatabase insertObject: arrayM atIndex: 0];
-        [arrayDatabase writeToFile: [Library dataFilePath] atomically: YES];
         
     } else { //Saving Changes from existing record
+        NSUInteger index = [[[arrayM lastObject] objectForKey: @"index"] unsignedIntegerValue];
+        [arrayM removeLastObject];
+        [arrayDatabase replaceObjectAtIndex: index withObject: arrayM];
         
     }
-    
+    [arrayDatabase writeToFile: [Library dataFilePath] atomically: YES];
     [self.navigationController popViewControllerAnimated: YES];
     
 }
