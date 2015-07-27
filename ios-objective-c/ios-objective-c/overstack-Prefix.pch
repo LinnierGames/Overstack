@@ -1,0 +1,18 @@
+//
+//  overstack-Prefix.pch
+//  ios-objective-c
+//
+//  Created by Erick Sanchez on 7/19/15.
+//  Copyright (c) 2015 Erick Sanchez. All rights reserved.
+//
+
+#ifndef ios_objective_c_overstack_Prefix_pch
+#define ios_objective_c_overstack_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "Library.h"
+#import "CategoryClasses.h"
+
+#endif

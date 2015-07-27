@@ -1,0 +1,201 @@
+What @jacob bullock is suggesting is totally correct. You'd want to read and write to a database and the simplest way, I would think, is writing to a plist with arrays and dictionaries. But there's more to that than knowing how to read and write.
+
+ps i don't know how much is expected to already be known sooo :)
+
+## Creating an App to Read and Write to a plist ##
+
+You'll want to create methods, or functions to access and write to this database, or file. Because the last thing you want to do is repeat code.
+
+**Setting the database up**
+
+A good idea to hold common methods to be used anywhere in your app is in a **singleton** using a **prefix file**. You can check out this link to get more on [creating a singleton and adding a prefix file][1]. Using a singleton, you can save file paths, arrays to hold the loaded data, and how to save any changes to a record; in your case to save changes made from a person record. In the link shown above, follow it all through except when you get to ** Adding Properties to a Class **. There you'll be adding different properties, in your case, a property with datatype **NSMutableArray** or **NSMutableDictionary**. If you need any help with this link, goahead and leave a comment for that answer :3
+
+Once you got the **singleton** setup, methods to load the file path of the plist is what's next. Something like this will go in your **singleton**:
+
+**Library.h**
+
+    @interface Library : NSObject
+    ...
+    /**
+     * Since this function does not need anything from its instance class, we use a + vs a - to access this method a
+     * a class method
+     * @return NSString : direct file path of the database.plist
+     */
+    + (NSString *)dataFilePath;
+    ...
+    @end
+
+**Library.m**
+
+    @implentation Library
+    ...
+    + (NSString *)dataFilePath {
+        NSArray *paths = NSSearchPathForDirectoriesInDomains( NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString *dictionaryDocuments = [paths objectAtIndex: 0];
+
+        return [dictionaryDocuments stringByAppendingPathComponent: @"database.plist"];
+        
+    }
+    ...
+    @end
+
+Next lets do some saving and writing, just to test it out.
+
+**Writing to this file**
+
+So this may not be the record you're using in your application but as long as you hold the objects in an array or dictionary when saving, this will work. In your view controller, go ahead and run this code:
+
+**ViewController.m**
+
+    @implementation ViewController
+    ...
+    - (void)viewDidLoad {
+        [super viewDidLoad];
+        // Do any additional setup after loading the view, typically from a nib.
+        NSArray *arrayPeople = [NSArray arrayWithObjects:
+                          @[@"Jack", [NSNumber numberWithInteger: 12], [NSNumber numberWithBool: YES]],
+                          @[@"Alex", [NSNumber numberWithInteger: 14], [NSNumber numberWithBool: YES]],
+                          @[@"Dawn", [NSNumber numberWithInteger: 10], [NSNumber numberWithBool: NO]],
+                          @[@"Bob", [NSNumber numberWithInteger: 13], [NSNumber numberWithBool: YES]],
+                          @[@"Sarah", [NSNumber numberWithInteger: 12], [NSNumber numberWithBool: YES]],
+                          nil];
+        
+        [arrayPeople writeToFile: [Library dataFilePath] atomically: YES];
+        
+    }
+    ...
+    @end
+
+What this code did is create an array, called **arrayPeople**, holding other arrays. And in each of those arrays is a **record**. In a record, there is a *name*, *age*, and *isMale* value. Then in the next line of code, we save the contents of the array, **arrayPeople**, to the direct file path we created in the **Library Singleton**; `[Library dataFilePath]`. Run this code in a blank project and then quit. Your app isn't going to do anything that is visible.
+
+Now we want to look for this file we just saved!
+
+**Searching for the application's documents folder**
+
+Since the update for Xcode, not sure which update, the simulators have been structured a different way, keeping shortcuts to your app's documents folder impossible D: So! We're going to find it using a **Smart Finder Window** to quickly find it.
+
+Access your **user library folder**. Should look something like this:
+
+[![user library folder][2]][3]
+
+Then look for **Developer** > **CoreSimulator** and there should be a folder named **Devices**. Click on this folder and then in the same Finder Window, look for the search bar and type, **database.plist**. You're going to want to search in **Devices**, not **This Mac**:
+
+[![searching][4]][4]
+
+And there lies your file! What I would do next is in this same window, you should see, to the right of the **This Mac** button, a save button. Save this search so you can access this file with a click :)
+
+What's next is displaying the data in a table! I'm going to assume you already know how to do this :) If not, there is defiantly a question and answer on this site to do so.
+
+**Creating a view controller as a forum**
+
+This is where thing's get fun :) Create a new file in your project and call it, **RecordEditorViewController** subclass: **UIViewController**.
+
+Nothing special about this class other than creating a method to send an array whenever the user clicks on a **record** to edit then save it, or when adding a new **record**. This view controller will do that.
+
+The method you'll use is what’s shown bellow. We’re also going to add a property to know what we’re doing with this record; adding or modifying:
+
+**RecordEditorViewController.h**
+
+    typedef enum : int {
+        CTRecordAdding,
+        CTRecordModify
+        
+    } CDRecordOptions;
+    
+    @interface RecordEditorViewController : UIViewController
+    ...
+
+    @property ( assign, readonly ) CDRecordOptions option;
+
+    - (id)initWithRecord:(NSArray *)arrayRecord option:(CDRecordOptions)optionValue;
+    ...
+    @end
+
+**RecordEditorViewController.m**
+
+
+#import "RecordEditorViewController.h"
+
+@interface RecordEditorViewController () {
+    NSMutableArray *arrayM;
+    
+}
+
+@end
+
+@implementation RecordEditorViewController
+@synthesize option;
+
+- (id)initWithRecord:(NSArray *)arrayRecord option:(CDRecordOptions)optionValue {
+    self = [super initWithNibName: @"RecordEditorViewController" bundle: [NSBundle mainBundle]];
+    
+    if (self) {
+        arrayM = [[NSMutableArray alloc] initWithArray: arrayRecord];
+        option = optionValue;
+        
+    }
+    
+    return self;
+    
+}
+
+Now that the view controller, ** RecordEditorViewController**, is set up to take in a value, lets use it and check it with `NSLog(..);`
+
+**Using the editor**
+
+First import the class we created into the view controller that will send the data. Then, for quick testing, we’re add a trigger to add a new record in `-viewDidAppear:`:
+
+**ViewController.m**
+
+..
+#import "ViewController.h"
+
+#import "RecordEditorViewController.h"
+..
+- (void)viewDidAppear:(BOOL)animated {
+    NSArray *arrayNewPerson = [NSArray arrayWithObjects: @"New Person", [NSNumber numberWithInteger: 1], [NSNumber numberWithBool: YES], nil];
+    RecordEditorViewController *viewNew = [[RecordEditorViewController alloc] initWithRecord: arrayNewPerson option: CTRecordAdding];
+    [self presentViewController: viewNew animated: YES completion: ^{ }];
+    
+}
+..
+
+**RecordEditorViewController.m**
+
+..
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view from its nib.
+    NSLog( @"%@", arrayM);
+    
+}
+..
+
+
+
+You would use this as a parameter in the following functions:
+
+Loading the data into an array, or dictionary:
+
+    arrayDatabase = [NSArray arrayWithContentsOfFile: [self dataFilePath]];
+
+    or
+
+    arrayDatabase = [[NSArray alloc] initWithContentsOfFile: [self dataFilePath]];
+
+Saving the array, or dictionary:
+
+    [arrayDatabase writeToFile: [self dataFilePath] atomically: YES];
+
+**Keeping things in persistence**
+
+How I normally load the database is whenever a view is *done appearing*, in this case, whenever `-viewWillAppear:` is called is where you want to load the database to the array.
+
+How it looks like is you have one view that displays the data in a table, and another view to add, modify, 
+
+
+  [1]: http://stackoverflow.com/questions/31502216/accessing-a-property-from-another-class/31503693#31503693 "singleton"
+  [2]: http://i.stack.imgur.com/1ggAu.png
+  [3]: http://i.stack.imgur.com/1ggAu.png
+  [4]: http://i.stack.imgur.com/cq904.png
