@@ -8,10 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController {
-    IBOutlet UITableView *tableview;
-    
-}
+@interface ViewController : UIViewController
 
 
 @end

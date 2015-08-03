@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E13C1DBE1B66985200F370EA /* CategoryClasses.m in Sources */ = {isa = PBXBuildFile; fileRef = E13C1DBD1B66985200F370EA /* CategoryClasses.m */; };
 		E1D7A0B41B5C03F200730B1F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D7A0B31B5C03F200730B1F /* main.m */; };
 		E1D7A0B71B5C03F200730B1F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D7A0B61B5C03F200730B1F /* AppDelegate.m */; };
 		E1D7A0BA1B5C03F200730B1F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D7A0B91B5C03F200730B1F /* ViewController.m */; };
@@ -15,9 +14,6 @@
 		E1D7A0BF1B5C03F200730B1F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1D7A0BE1B5C03F200730B1F /* Images.xcassets */; };
 		E1D7A0C21B5C03F200730B1F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1D7A0C01B5C03F200730B1F /* LaunchScreen.xib */; };
 		E1D7A0CE1B5C03F200730B1F /* ios_objective_cTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D7A0CD1B5C03F200730B1F /* ios_objective_cTests.m */; };
-		E1D7A11A1B5C0B5400730B1F /* Library.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D7A1191B5C0B5400730B1F /* Library.m */; };
-		E1E052AC1B614D20009F522A /* RecordEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E052AA1B614D20009F522A /* RecordEditorViewController.m */; };
-		E1E052AD1B614D20009F522A /* RecordEditorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1E052AB1B614D20009F522A /* RecordEditorViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,8 +27,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E13C1DBC1B66985200F370EA /* CategoryClasses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryClasses.h; sourceTree = "<group>"; };
-		E13C1DBD1B66985200F370EA /* CategoryClasses.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryClasses.m; sourceTree = "<group>"; };
 		E1D7A0AE1B5C03F200730B1F /* ios-objective-c.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-objective-c.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1D7A0B21B5C03F200730B1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1D7A0B31B5C03F200730B1F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -46,12 +40,6 @@
 		E1D7A0C71B5C03F200730B1F /* ios-objective-cTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-objective-cTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1D7A0CC1B5C03F200730B1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1D7A0CD1B5C03F200730B1F /* ios_objective_cTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ios_objective_cTests.m; sourceTree = "<group>"; };
-		E1D7A1171B5C079200730B1F /* overstack-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "overstack-Prefix.pch"; sourceTree = "<group>"; };
-		E1D7A1181B5C0B5400730B1F /* Library.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Library.h; sourceTree = "<group>"; };
-		E1D7A1191B5C0B5400730B1F /* Library.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Library.m; sourceTree = "<group>"; };
-		E1E052A91B614D20009F522A /* RecordEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordEditorViewController.h; sourceTree = "<group>"; };
-		E1E052AA1B614D20009F522A /* RecordEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordEditorViewController.m; sourceTree = "<group>"; };
-		E1E052AB1B614D20009F522A /* RecordEditorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecordEditorViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,17 +60,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E13C1DBB1B66982500F370EA /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				E1D7A1181B5C0B5400730B1F /* Library.h */,
-				E1D7A1191B5C0B5400730B1F /* Library.m */,
-				E13C1DBC1B66985200F370EA /* CategoryClasses.h */,
-				E13C1DBD1B66985200F370EA /* CategoryClasses.m */,
-			);
-			name = Controllers;
-			sourceTree = "<group>";
-		};
 		E1D7A0A51B5C03F100730B1F = {
 			isa = PBXGroup;
 			children = (
@@ -106,12 +83,8 @@
 			children = (
 				E1D7A0B51B5C03F200730B1F /* AppDelegate.h */,
 				E1D7A0B61B5C03F200730B1F /* AppDelegate.m */,
-				E13C1DBB1B66982500F370EA /* Controllers */,
 				E1D7A0B81B5C03F200730B1F /* ViewController.h */,
 				E1D7A0B91B5C03F200730B1F /* ViewController.m */,
-				E1E052A91B614D20009F522A /* RecordEditorViewController.h */,
-				E1E052AA1B614D20009F522A /* RecordEditorViewController.m */,
-				E1E052AB1B614D20009F522A /* RecordEditorViewController.xib */,
 				E1D7A0BB1B5C03F200730B1F /* Main.storyboard */,
 				E1D7A0BE1B5C03F200730B1F /* Images.xcassets */,
 				E1D7A0C01B5C03F200730B1F /* LaunchScreen.xib */,
@@ -125,7 +98,6 @@
 			children = (
 				E1D7A0B21B5C03F200730B1F /* Info.plist */,
 				E1D7A0B31B5C03F200730B1F /* main.m */,
-				E1D7A1171B5C079200730B1F /* overstack-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -227,7 +199,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1E052AD1B614D20009F522A /* RecordEditorViewController.xib in Resources */,
 				E1D7A0BD1B5C03F200730B1F /* Main.storyboard in Resources */,
 				E1D7A0C21B5C03F200730B1F /* LaunchScreen.xib in Resources */,
 				E1D7A0BF1B5C03F200730B1F /* Images.xcassets in Resources */,
@@ -248,10 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1E052AC1B614D20009F522A /* RecordEditorViewController.m in Sources */,
 				E1D7A0BA1B5C03F200730B1F /* ViewController.m in Sources */,
-				E13C1DBE1B66985200F370EA /* CategoryClasses.m in Sources */,
-				E1D7A11A1B5C0B5400730B1F /* Library.m in Sources */,
 				E1D7A0B71B5C03F200730B1F /* AppDelegate.m in Sources */,
 				E1D7A0B41B5C03F200730B1F /* main.m in Sources */,
 			);
@@ -379,7 +347,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = "ios-objective-c/overstack-Prefix.pch";
 				INFOPLIST_FILE = "ios-objective-c/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -390,7 +357,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = "ios-objective-c/overstack-Prefix.pch";
 				INFOPLIST_FILE = "ios-objective-c/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -450,7 +416,6 @@
 				E1D7A0D31B5C03F200730B1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 		E1D7A0D41B5C03F200730B1F /* Build configuration list for PBXNativeTarget "ios-objective-cTests" */ = {
 			isa = XCConfigurationList;
@@ -459,7 +424,6 @@
 				E1D7A0D61B5C03F200730B1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
