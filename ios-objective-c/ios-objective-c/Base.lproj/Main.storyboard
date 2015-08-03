@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,8 +16,38 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZC5-8m-xpY">
+                                <rect key="frame" x="0.0" y="438" width="600" height="162"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="pPe-w6-n4V"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="BVX-fd-sdZ"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zzu-Ta-WdP">
+                                <rect key="frame" x="0.0" y="273" width="600" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="zbF-Nh-ROI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZC5-8m-xpY" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="92m-6s-s5M"/>
+                            <constraint firstItem="ZC5-8m-xpY" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="NQ1-vh-gO6"/>
+                            <constraint firstAttribute="centerY" secondItem="Zzu-Ta-WdP" secondAttribute="centerY" constant="0.5" id="Pr5-y2-lTE"/>
+                            <constraint firstAttribute="centerX" secondItem="Zzu-Ta-WdP" secondAttribute="centerX" id="TQI-c2-phm"/>
+                            <constraint firstAttribute="trailing" secondItem="ZC5-8m-xpY" secondAttribute="trailing" id="e5X-MB-Yg8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Zzu-Ta-WdP" secondAttribute="trailing" constant="-16" id="qas-4O-E6c"/>
+                            <constraint firstItem="Zzu-Ta-WdP" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="x8n-NX-5qQ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="labelEmotion" destination="Zzu-Ta-WdP" id="QcZ-5x-glx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
