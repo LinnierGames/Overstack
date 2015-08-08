@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell - Button" rowHeight="81" id="KGk-i7-Jjw" customClass="UICustomTableViewCells">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="81"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ykv-Hk-nFg">
+                        <rect key="frame" x="137" y="26" width="46" height="30"/>
+                        <state key="normal" title="Button">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="pressButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="rZg-bg-mhO"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ykv-Hk-nFg" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="ITT-pU-pzf"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="ykv-Hk-nFg" secondAttribute="trailing" constant="129" id="O6S-W9-hnt"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="ykv-Hk-nFg" secondAttribute="bottom" constant="17" id="ZA3-xt-5Kh"/>
+                    <constraint firstItem="ykv-Hk-nFg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="18" id="pbb-SB-HYG"/>
+                    <constraint firstItem="ykv-Hk-nFg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="129" id="tgi-9p-7oZ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="button" destination="ykv-Hk-nFg" id="5yZ-q1-C1f"/>
+            </connections>
+            <point key="canvasLocation" x="227" y="408.5"/>
+        </tableViewCell>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell - Buttons" rowHeight="81" id="jy5-Lp-sxu" customClass="UICustomTableViewCells">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="81"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jy5-Lp-sxu" id="Ut5-oy-XdU">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkG-WG-8y7">
+                        <rect key="frame" x="8" y="26" width="46" height="30"/>
+                        <state key="normal" title="Button">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="pressSubbutton:" destination="jy5-Lp-sxu" eventType="touchUpInside" id="v83-2Y-OKn"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oxx-n5-RSM">
+                        <rect key="frame" x="137" y="26" width="46" height="30"/>
+                        <state key="normal" title="Button">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="pressSubbutton:" destination="jy5-Lp-sxu" eventType="touchUpInside" id="Lg0-dU-Wf0"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9oH-JO-KTk">
+                        <rect key="frame" x="266" y="26" width="46" height="30"/>
+                        <state key="normal" title="Button">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="pressSubbutton:" destination="jy5-Lp-sxu" eventType="touchUpInside" id="Kog-ar-XXo"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Oxx-n5-RSM" firstAttribute="width" secondItem="9oH-JO-KTk" secondAttribute="width" id="7b1-BO-k8D"/>
+                    <constraint firstItem="bkG-WG-8y7" firstAttribute="leading" secondItem="Ut5-oy-XdU" secondAttribute="leadingMargin" id="A0S-AJ-HTI"/>
+                    <constraint firstItem="Oxx-n5-RSM" firstAttribute="top" secondItem="Ut5-oy-XdU" secondAttribute="topMargin" constant="18" id="AR9-lA-YXM"/>
+                    <constraint firstItem="bkG-WG-8y7" firstAttribute="top" secondItem="Ut5-oy-XdU" secondAttribute="topMargin" constant="18" id="L7v-IK-f5p"/>
+                    <constraint firstItem="9oH-JO-KTk" firstAttribute="top" secondItem="Ut5-oy-XdU" secondAttribute="topMargin" constant="18" id="ReS-4X-5JW"/>
+                    <constraint firstItem="Oxx-n5-RSM" firstAttribute="leading" secondItem="bkG-WG-8y7" secondAttribute="trailing" constant="83" id="Xtq-23-OEg"/>
+                    <constraint firstItem="9oH-JO-KTk" firstAttribute="leading" secondItem="Oxx-n5-RSM" secondAttribute="trailing" constant="83" id="tBE-cp-VNS"/>
+                    <constraint firstItem="Oxx-n5-RSM" firstAttribute="width" secondItem="bkG-WG-8y7" secondAttribute="width" id="wpE-0d-9rU"/>
+                    <constraint firstItem="9oH-JO-KTk" firstAttribute="trailing" secondItem="Ut5-oy-XdU" secondAttribute="trailingMargin" id="z2p-n0-Kk1"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="button1" destination="bkG-WG-8y7" id="IHk-va-H62"/>
+                <outlet property="button2" destination="Oxx-n5-RSM" id="4Hh-Ag-nAP"/>
+                <outlet property="button3" destination="9oH-JO-KTk" id="bDN-Ai-P33"/>
+            </connections>
+            <point key="canvasLocation" x="227" y="543.5"/>
+        </tableViewCell>
+    </objects>
+</document>

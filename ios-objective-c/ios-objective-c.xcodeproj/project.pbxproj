@@ -14,6 +14,8 @@
 		E1D7A0BF1B5C03F200730B1F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1D7A0BE1B5C03F200730B1F /* Images.xcassets */; };
 		E1D7A0C21B5C03F200730B1F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1D7A0C01B5C03F200730B1F /* LaunchScreen.xib */; };
 		E1D7A0CE1B5C03F200730B1F /* ios_objective_cTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D7A0CD1B5C03F200730B1F /* ios_objective_cTests.m */; };
+		E1E22BE21B75D26900662606 /* UICustomTableViewCells.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E22BE01B75D26900662606 /* UICustomTableViewCells.m */; };
+		E1E22BE31B75D26900662606 /* UICustomTableViewCells.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1E22BE11B75D26900662606 /* UICustomTableViewCells.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		E1D7A0C71B5C03F200730B1F /* ios-objective-cTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-objective-cTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1D7A0CC1B5C03F200730B1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1D7A0CD1B5C03F200730B1F /* ios_objective_cTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ios_objective_cTests.m; sourceTree = "<group>"; };
+		E1E22BDE1B75D25300662606 /* UICustom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICustom.h; sourceTree = "<group>"; };
+		E1E22BDF1B75D26900662606 /* UICustomTableViewCells.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICustomTableViewCells.h; sourceTree = "<group>"; };
+		E1E22BE01B75D26900662606 /* UICustomTableViewCells.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICustomTableViewCells.m; sourceTree = "<group>"; };
+		E1E22BE11B75D26900662606 /* UICustomTableViewCells.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UICustomTableViewCells.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +95,8 @@
 				E1D7A0BE1B5C03F200730B1F /* Images.xcassets */,
 				E1D7A0C01B5C03F200730B1F /* LaunchScreen.xib */,
 				E1D7A0B11B5C03F200730B1F /* Supporting Files */,
+				E1E22BDE1B75D25300662606 /* UICustom.h */,
+				E1E22BE41B75D26D00662606 /* Headers */,
 			);
 			path = "ios-objective-c";
 			sourceTree = "<group>";
@@ -117,6 +125,16 @@
 				E1D7A0CC1B5C03F200730B1F /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E1E22BE41B75D26D00662606 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				E1E22BDF1B75D26900662606 /* UICustomTableViewCells.h */,
+				E1E22BE01B75D26900662606 /* UICustomTableViewCells.m */,
+				E1E22BE11B75D26900662606 /* UICustomTableViewCells.xib */,
+			);
+			name = Headers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +219,7 @@
 			files = (
 				E1D7A0BD1B5C03F200730B1F /* Main.storyboard in Resources */,
 				E1D7A0C21B5C03F200730B1F /* LaunchScreen.xib in Resources */,
+				E1E22BE31B75D26900662606 /* UICustomTableViewCells.xib in Resources */,
 				E1D7A0BF1B5C03F200730B1F /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,6 +240,7 @@
 			files = (
 				E1D7A0BA1B5C03F200730B1F /* ViewController.m in Sources */,
 				E1D7A0B71B5C03F200730B1F /* AppDelegate.m in Sources */,
+				E1E22BE21B75D26900662606 /* UICustomTableViewCells.m in Sources */,
 				E1D7A0B41B5C03F200730B1F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,6 +436,7 @@
 				E1D7A0D31B5C03F200730B1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E1D7A0D41B5C03F200730B1F /* Build configuration list for PBXNativeTarget "ios-objective-cTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +445,7 @@
 				E1D7A0D61B5C03F200730B1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
