@@ -1,9 +1,9 @@
 # Overstack
-<p>full projects of answers, questioned on stackoverflow.com. Any Copywrite header statements in any of these files are created by the machine via the Xcode application :)</p>
+<p>Full projects of answers, questioned on <a href="http://stackoverflow.com">stackoverflow.com</a>. Any Copywrite header statements in any of these files are created by the machine via the Xcode application :)</p>
 <ol>
-  <li><a href="#1">Saving data from fields in my form and retrieving them by listing out the main key in my main viewcontroller</a></li>
-  <li><a href="#2">How do I change the selected row in a UIPickerview to a String(text)</a></li>
-  <li><a href="#3">How to Use Custom UIButton in UITableViewCell</a></li>
+  <li><a href="#1">Saving data from fields in my form and retrieving them by listing out the main key in my main view controller</a></li>
+  <li><a href="#2">How do I change the selected row in a UIPickerview to a NSString</a></li>
+  <li><a href="#3">How to use custom UIButton in UITableViewCell</a></li>
 </ol>
 
 
